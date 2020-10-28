@@ -30,9 +30,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 setup angular :
-- ng version
+- ng version (jika blm muncul versinya, install terlebih dahulu)
 - ng new my-app
 - cd my-app
 - ng serve --open
 setup primeNg :
-- 
+- npm install primeng --save
+- npm install primeicons --save
+- npm install @angular/animations --save
