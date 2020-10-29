@@ -24,10 +24,11 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/primeflex/primeflex.css",
+              "./node_modules/primeflex/primeflex.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/saga-blue/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
+              "./node_modules/primeng/resources/primeng.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -121,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "angular-calculator"
+  "defaultProject": "angular-calculator",
+  "cli": {
+    "analytics": "c87e2210-235e-4fd2-ba8f-ea21649e85d2"
+  }
 }
