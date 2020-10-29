@@ -1,3 +1,93 @@
-<p>calculator works!</p>
-<button pButton type="button" label="submit"></button>
-<router-outlet></router-outlet>
+<div class="p-grid">
+    <div class="p-col-12 p-md-1 p-lg-4"></div>
+    <div class="p-col-12 p-md-8 p-lg-4">
+        <div class="output">
+            <div data-previous-operand class="previous-operand">
+                0
+            </div>
+            <div data-current-operand class="current-operand">
+                0
+            </div>
+        </div>
+        <div class="p-grid p-mt-0">
+            <div class="p-col-12 p-md-12 p-lg-12">
+                <button pButton pRipple class="p-button-raised p-button-warning" type="button" style="width: 37.5%;"
+                    label="AC"></button>
+                <button pButton pRipple class="p-button-raised p-button-warning" type="button" style="width: 37.5%;"
+                    label="DEL"></button>
+                <button pButton pRipple class="p-button-raised p-button-text" type="button" label=":"></button>
+            </div>
+        </div>
+        <div class="p-grid">
+            <div class="p-col-12 p-md-12 p-lg-12">
+                <button pButton pRipple type="button" class="p-button-raised p-button-secondary p-button-text"
+                    label="1"></button>
+                <button pButton pRipple type="button" class="p-button-raised p-button-secondary p-button-text"
+                    label="2"></button>
+                <button pButton pRipple type="button" class="p-button-raised p-button-secondary p-button-text"
+                    label="3"></button>
+                <button pButton pRipple type="button" class="p-button-raised p-button-text" label="*"></button>
+            </div>
+        </div>
+        <div class="p-grid">
+            <div class="p-col-12 p-md-12 p-lg-12">
+                <button pButton pRipple class="p-button-raised p-button-secondary p-button-text" type="button"
+                    label="4"></button>
+                <button pButton pRipple class="p-button-raised p-button-secondary p-button-text" type="button"
+                    label="5"></button>
+                <button pButton pRipple class="p-button-raised p-button-secondary p-button-text" type="button"
+                    label="6"></button>
+                <button pButton pRipple class="p-button-raised p-button-text" type="button" label="+"></button>
+            </div>
+        </div>
+        <div class="p-grid">
+            <div class="p-col-12 p-md-12 p-lg-12">
+                <button pButton pRipple class="p-button-raised p-button-secondary p-button-text" type="button"
+                    label="7"></button>
+                <button pButton pRipple class="p-button-raised p-button-secondary p-button-text" type="button"
+                    label="8"></button>
+                <button pButton pRipple class="p-button-raised p-button-secondary p-button-text" type="button"
+                    label="9"></button>
+                <button pButton pRipple class="p-button-raised p-button-text" type="button" label="-"></button>
+            </div>
+        </div>
+        <div class="p-grid">
+            <div class="p-col-12 p-md-12 p-lg-12">
+                <button pButton pRipple class="p-button-raised p-button-text" type="button" label="."></button>
+                <button pButton pRipple class="p-button-raised p-button-secondary p-button-text" type="button"
+                    label="0"></button>
+                <button pButton pRipple class="p-button-raised p-button-warning" style="width: 50%;" type="button"
+                    label="="></button>
+            </div>
+        </div>
+    </div>
+    <div class="p-col-12 p-md-1 p-lg-4"></div>
+</div>
+
+<!-- contoh -->
+<!-- <div class="calculator-grid">
+    <div class="output">
+        <div data-previous-operand class="previous-operand">
+        </div>
+        <div data-current-operand class="current-operand">
+        </div>
+    </div>
+    <button data-all-clear class="span-two">AC</button>
+    <button data-delete>DEL</button>
+    <button data-operation>:</button>
+    <button data-number>1</button>
+    <button data-number>2</button>
+    <button data-number>3</button>
+    <button data-operation>*</button>
+    <button data-number>4</button>
+    <button data-number>5</button>
+    <button data-number>6</button>
+    <button data-operation>+</button>
+    <button data-number>7</button>
+    <button data-number>8</button>
+    <button data-number>9</button>
+    <button data-operation>-</button>
+    <button data-number>.</button>
+    <button data-number>0</button>
+    <button data-equals class="span-two">=</button>
+</div> -->
