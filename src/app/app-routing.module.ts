@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CalculatorComponent } from '../app/components/calculator/calculator.component';
 
-
-const routes: Routes = [];
+const routes: Routes = [
+  // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'calculator', component: CalculatorComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
