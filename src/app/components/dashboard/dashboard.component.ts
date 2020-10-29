@@ -13,14 +13,14 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.itemCard = [
-      { id: '1', title: 'Covid Tracker', image: '', },
-      { id: '2', title: 'Calculator', image: '', },
-      { id: '3', title: 'Timer', image: '', },
-      { id: '4', title: 'Todo App', image: '', },
-      { id: '5', title: 'Accounting', image: '', },
-      { id: '6', title: 'Game', image: '', },
-      { id: '7', title: 'Book', image: '', },
-      { id: '8', title: 'Story', image: '', },
+      { id: '1', title: 'Covid Tracker', route: 'covid-tracker', image: '', },
+      { id: '2', title: 'Calculator', route: 'calculator', image: '', },
+      { id: '3', title: 'Timer', route: 'timer', image: '', },
+      { id: '4', title: 'Todo App', route: 'todo-app', image: '', },
+      { id: '5', title: 'Accounting', route: 'accounting', image: '', },
+      { id: '6', title: 'Game', route: 'game', image: '', },
+      { id: '7', title: 'Book', route: 'book', image: '', },
+      { id: '8', title: 'Story', route: 'story', image: '', },
     ]
   }
 

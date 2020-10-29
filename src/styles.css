@@ -7,3 +7,7 @@ label {
     font-weight: 600;
     font-size: x-large;
 }
+
+a {
+    text-decoration: none;
+}

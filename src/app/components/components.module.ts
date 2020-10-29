@@ -3,17 +3,17 @@ import { SharedModule } from '../shared/shared.module';
 
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     CalculatorComponent,
-    DashboardComponent
+    DashboardComponent,
+    PageNotFoundComponent
   ],
   imports: [
     SharedModule
   ],
-  exports: [
-    CalculatorComponent
-  ]
+  exports: []
 })
 export class ComponentsModule { }
