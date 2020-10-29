@@ -1,1 +1,23 @@
-<p>dashboard works!</p>
+<div class="background">
+    <div class="p-grid p-mt-3 p-flex-column">
+        <div class="p-col">
+            <div class="p-mb-3 p-text-center header">
+                <label>My List Simple App using Angular</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-grid">
+        <div class="p-col-12 p-md-6 p-lg-3" *ngFor="let item of itemCard">
+            <p-card [header]="item.title">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
+                    repudiandae
+                    numquam deserunt
+                    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
+                    cupiditate
+                    neque
+                    quas!</p>
+            </p-card>
+        </div>
+    </div>
+</div>

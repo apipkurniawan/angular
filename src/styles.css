@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+label {
+    font-family: 'Segoe UI';
+}
+
+.header {
+    font-weight: 600;
+    font-size: x-large;
+}
