@@ -12,8 +12,7 @@ export class CalculatorComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   getNumberValue(e: string) {
     if (this.currentOperand !== '0') {

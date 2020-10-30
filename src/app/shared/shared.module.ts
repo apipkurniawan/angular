@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { NoDecimalPipe } from './pipes/no-decimal.pipe';
+
 import { PrimeNgModule } from './prime-ng.module';
 
 @NgModule({
@@ -13,8 +15,11 @@ import { PrimeNgModule } from './prime-ng.module';
         CommonModule,
         FormsModule,
         BrowserAnimationsModule,
-        BrowserModule
+        BrowserModule,
+        NoDecimalPipe
     ],
-    declarations: []
+    declarations: [
+        NoDecimalPipe
+    ]
 })
 export class SharedModule { }

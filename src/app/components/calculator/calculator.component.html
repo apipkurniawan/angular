@@ -6,7 +6,7 @@
                 {{ previousOperand }}
             </div>
             <div class="current-operand">
-                {{ currentOperand }}
+                {{ currentOperand | currency :'IDR':'' | noDecimal }}
             </div>
         </div>
         <div class="p-grid p-mt-0">
