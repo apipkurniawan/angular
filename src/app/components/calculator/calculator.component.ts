@@ -95,7 +95,7 @@ export class CalculatorComponent implements OnInit {
     }
   }
   private clearCurrentOperand() {
-    this.valueButtons = [];
+    this.valueButtons.clear();
     this.currentOperand = '0';
     this.displayDecimal = '';
   }

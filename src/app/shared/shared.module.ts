@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoDecimalPipe } from './pipes/no-decimal.pipe';
 
 import { PrimeNgModule } from './prime-ng.module';
+import '../core/array.prototype';
 
 @NgModule({
     imports: [],
