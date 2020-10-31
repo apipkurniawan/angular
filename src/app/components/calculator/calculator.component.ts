@@ -4,8 +4,7 @@ import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.css'],
-  providers: [MessageService]
+  styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent implements OnInit {
   valueButtons: string[] = [];
@@ -103,16 +102,6 @@ export class CalculatorComponent implements OnInit {
   private setDisplayDecimal() {
     const numberAfterComma = this.currentOperand.split('.')[1];
     this.displayDecimal = numberAfterComma ? `.${numberAfterComma}` : '';
-  }
-
-  onConfirm() {
-    this.messageService.clear('c');
-  }
-  onReject() {
-    this.messageService.clear('c');
-  }
-  clear() {
-    this.messageService.clear();
   }
 
 }
