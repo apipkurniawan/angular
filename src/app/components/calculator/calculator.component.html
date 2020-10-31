@@ -3,7 +3,7 @@
     <div class="p-col-12 p-md-8 p-lg-4">
         <div class="output">
             <div class="previous-operand">
-                {{ previousOperand }}
+                {{ previousOperand | currency :'IDR':'' | noDecimal }}
             </div>
             <div class="current-operand">
                 {{ currentOperand | currency :'IDR':'' | noDecimal }}
@@ -15,7 +15,8 @@
                     label="AC" (click)=allClear()></button>
                 <button pButton pRipple class="p-button-raised p-button-warning" type="button" style="width: 37.5%;"
                     label="DEL" (click)="deleteLastNum()"></button>
-                <button pButton pRipple class="p-button-raised p-button-text" type="button" label=":"></button>
+                <button pButton pRipple class="p-button-raised p-button-text" type="button" label="÷"
+                    (click)="operationBtn('÷')"></button>
             </div>
         </div>
         <div class="p-grid">
@@ -26,7 +27,8 @@
                     (click)="getNumberValue('2')"></button>
                 <button pButton pRipple type="button" class="p-button-raised p-button-secondary p-button-text" label="3"
                     (click)="getNumberValue('3')"></button>
-                <button pButton pRipple type="button" class="p-button-raised p-button-text" label="*"></button>
+                <button pButton pRipple type="button" class="p-button-raised p-button-text" label="*"
+                    (click)="operationBtn('x')"></button>
             </div>
         </div>
         <div class="p-grid">
@@ -37,7 +39,8 @@
                     (click)="getNumberValue('5')"></button>
                 <button pButton pRipple class="p-button-raised p-button-secondary p-button-text" type="button" label="6"
                     (click)="getNumberValue('6')"></button>
-                <button pButton pRipple class="p-button-raised p-button-text" type="button" label="+"></button>
+                <button pButton pRipple class="p-button-raised p-button-text" type="button" label="+"
+                    (click)="operationBtn('+')"></button>
             </div>
         </div>
         <div class="p-grid">
@@ -48,7 +51,8 @@
                     (click)="getNumberValue('8')"></button>
                 <button pButton pRipple class="p-button-raised p-button-secondary p-button-text" type="button" label="9"
                     (click)="getNumberValue('9')"></button>
-                <button pButton pRipple class="p-button-raised p-button-text" type="button" label="-"></button>
+                <button pButton pRipple class="p-button-raised p-button-text" type="button" label="-"
+                    (click)="operationBtn('-')"></button>
             </div>
         </div>
         <div class="p-grid">
@@ -57,7 +61,7 @@
                 <button pButton pRipple class="p-button-raised p-button-secondary p-button-text" type="button" label="0"
                     (click)="getNumberValue('0')"></button>
                 <button pButton pRipple class="p-button-raised p-button-warning" style="width: 50%;" type="button"
-                    label="="></button>
+                    label="=" (click)="equalsBtn()"></button>
             </div>
         </div>
     </div>
