@@ -5,4 +5,5 @@ export class AppInfo {
     image: string;
     deskripsi: string;
     postedTime: Date;
+    author: string;
 }
