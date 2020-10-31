@@ -1,29 +1,55 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.css']
+  styleUrls: ['./calculator.component.css'],
+  providers: [MessageService]
 })
 export class CalculatorComponent implements OnInit {
   valueButtons: string[] = [];
   previousOperand = '0';
   currentOperand = '0';
-  resultOperand = '0';
+  displayDecimal = '';
   operation: string;
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit(): void { }
 
   getNumberValue(e: string) {
     if (this.currentOperand !== '0') {
       this.valueButtons = [this.currentOperand];
-      this.valueButtons.push(e);
-      this.currentOperand = this.valueButtons.join('');
+    }
+    if (e === '.') {
+      if (!this.currentOperand.includes('.')) {
+        this.valueButtons.push(e);
+      }
     } else {
       this.valueButtons.push(e);
+    }
+    if (this.valueButtons.join('').split('.')[0].length > 15) {
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Warning',
+        detail: 'tidak dapat memasukkan lebih dari 15 digit'
+      });
+    } else {
       this.currentOperand = this.valueButtons.join('');
+    }
+    this.setDecimalValue();
+  }
+
+  setDecimalValue() {
+    if (this.currentOperand.split('.')[1].length > 10) {
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Warning',
+        detail: 'tidak dapat memasukkan lebih dari 10 digit dibelakang koma desimal'
+      });
+    } else {
+      this.displayDecimal = this.currentOperand.split('.')[1] ? '.' + this.currentOperand.split('.')[1] : '';
     }
   }
 
@@ -62,6 +88,7 @@ export class CalculatorComponent implements OnInit {
   clearCurrentOperand() {
     this.valueButtons = [];
     this.currentOperand = '0';
+    this.displayDecimal = '';
   }
   allClear() {
     this.clearCurrentOperand();
@@ -69,5 +96,15 @@ export class CalculatorComponent implements OnInit {
   }
   deleteLastNum() {
     this.currentOperand = this.currentOperand.slice(0, -1);
+  }
+
+  onConfirm() {
+    this.messageService.clear('c');
+  }
+  onReject() {
+    this.messageService.clear('c');
+  }
+  clear() {
+    this.messageService.clear();
   }
 }
