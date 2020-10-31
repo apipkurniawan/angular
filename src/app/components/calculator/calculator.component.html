@@ -28,7 +28,7 @@
     <div class="p-col-12 p-md-8 p-lg-4">
         <div class="output">
             <div class="previous-operand">
-                {{ previousOperand | currency :'IDR':'' | noDecimal }}
+                {{ previousOperand | number }}
             </div>
             <div class="current-operand">
                 {{ (currentOperand.split('.')[0] | number).concat(this.displayDecimal) }}

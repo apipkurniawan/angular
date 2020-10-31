@@ -29,7 +29,7 @@ export class CalculatorComponent implements OnInit {
     } else {
       this.valueButtons.push(e);
     }
-    if (this.valueButtons.join('').split('.')[0].length > 15) {
+    if (this.valueButtons.join('').length > 15) {
       this.messageService.add({
         severity: 'error',
         summary: 'Warning',
@@ -37,19 +37,21 @@ export class CalculatorComponent implements OnInit {
       });
     } else {
       this.currentOperand = this.valueButtons.join('');
+      this.setDecimalValue();
     }
-    this.setDecimalValue();
   }
 
   setDecimalValue() {
-    if (this.currentOperand.split('.')[1].length > 10) {
-      this.messageService.add({
-        severity: 'error',
-        summary: 'Warning',
-        detail: 'tidak dapat memasukkan lebih dari 10 digit dibelakang koma desimal'
-      });
-    } else {
-      this.displayDecimal = this.currentOperand.split('.')[1] ? '.' + this.currentOperand.split('.')[1] : '';
+    if (this.currentOperand.split('.')[1]) {
+      if (this.currentOperand.split('.')[1].length > 10) {
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Warning',
+          detail: 'tidak dapat memasukkan lebih dari 10 digit dibelakang koma desimal'
+        });
+      } else {
+        this.displayDecimal = this.currentOperand.split('.')[1] ? '.' + this.currentOperand.split('.')[1] : '';
+      }
     }
   }
 
@@ -96,6 +98,7 @@ export class CalculatorComponent implements OnInit {
   }
   deleteLastNum() {
     this.currentOperand = this.currentOperand.slice(0, -1);
+    this.displayDecimal = this.currentOperand.split('.')[1] ? '.' + this.currentOperand.split('.')[1] : '';
   }
 
   onConfirm() {
